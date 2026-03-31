@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     const books = await getAllBooks();
     res.json(books);
   } catch (err) { 
-    res.send.json({ error: 'Failed to fetch books' });
+    res.send("Failed to fetch books");
   }
 });
 
@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
     }
     res.json(book);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch book' });
+    res.send("Failed to fetch book");
   }
 });
 
